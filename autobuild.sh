@@ -19,3 +19,4 @@ fi
 cd ./build
 cmake ..
 make
+sudo cp -f ../lib/libdbconnectionpool.a /usr/local/lib/ 
