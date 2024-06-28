@@ -31,6 +31,10 @@ ConnectionPool::ConnectionPool()
     // 启动一个线程，作为生产者线程
     thread producer(std::bind(&ConnectionPool::produceConnectionTask, this));
     producer.detach();
+
+    // 启动一个线程，定时扫描队列，释放空闲连接
+    thread scanner(std::bind(&ConnectionPool::scanIdleConnection, this));
+    scanner.detach();
 }
 
 // 线程安全的懒汉单例,获取一个连接池实例对象
