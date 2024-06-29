@@ -14,6 +14,7 @@ mysql数据库连接池
 | 1000   | 1550ms       | 50ms       |
 | 5000   | 8920ms       | 170ms      |
 | 10000  | 17200ms      | 370ms      |
+![image text](https://github.com/xiaoyou137/groceries-repo/blob/main/pics/mysql-test.png)
 
 # 功能设计实现
 
